@@ -1,0 +1,12 @@
+services:
+  spring-forward-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfiles/Dockerfile
+    image: rizky/spring-forward-proxy:1.0.0
+    container_name: spring-forward-proxy
+    hostname: spring-forward-proxy
+    restart: always
+    ports:
+      - '7070:8080'
+
